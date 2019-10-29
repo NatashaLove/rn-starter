@@ -5,7 +5,7 @@ import {Text, StyleSheet, View} from 'react-native';//2 pieces from library
 //create function returning JSX
 const ComponentsScreen = () => {
     //js var - to be inserted into Text
-    const greeting = 'Bye there!';
+    const greeting = 'Hi Melissa!';
     //can do arrays (printing in one line)
     const arr = ['natasha', ' love', 38];
     //jsx element inside js var:
@@ -21,7 +21,7 @@ return <View>
 
 <Text> Hi there! </Text>
 
-<Text>{greeting}</Text>
+<Text style = {styles.textStyle}>{greeting}</Text>
 <Text style={styles.nameStyle}>{arr}</Text>
 {jsxel}
 <Text style={styles.nameStyle}>This is goodbye message using variable greeting: {greeting}</Text>
