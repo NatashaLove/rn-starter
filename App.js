@@ -13,8 +13,8 @@ const navigator = createStackNavigator(
   },
   //2 object
   {
-    //which first component should be displayed
-    initialRouteName: 'List',
+    //which first component should be displayed -which screen:
+    initialRouteName: 'Home',
     defaultNavigationOptions: {
       title: 'App'
     }

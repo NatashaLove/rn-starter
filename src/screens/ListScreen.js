@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     textStyle: {
         marginVertical: 50,
         marginHorizontal: 15,
-        fontSize: 25
+        fontSize: 15
 
     }
 });
