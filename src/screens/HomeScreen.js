@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, StyleSheet, View, Button, TouchableOpacity } from 'react-native';
 
 const HomeScreen = ({navigation}) => {
-  console.log(props.navigation);
+  //console.log(props.navigation);
   return <View>
   <Text style={styles.text}>Hello Natasha</Text>
   
@@ -21,7 +21,7 @@ const HomeScreen = ({navigation}) => {
     title="Go to List Demo"
     onPress={()=> navigation.navigate('List')}
   />
-  <TouchableOpacity onPress={()=> props.navigation.navigate('List')}>
+  <TouchableOpacity onPress={()=> navigation.navigate('Image')}>
     <Text>go to list Demo </Text>
     <Text>Natasha </Text>
   </TouchableOpacity>
