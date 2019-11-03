@@ -7,7 +7,8 @@ const CounterScreen = () =>{
    // let counter =0;
 
    //correct way to atch state (useState func):
-   const [counter, setCounter]=useState(0);// new state starts from 0(initialized)
+   //name var and setter func anyway I want:
+   const [counter, setCounter]=useState(0);  // new state starts from counter= 0(initialized)
 //redestructuring array:, setCounter  - func which gives the value of counter
 
     return (
@@ -27,6 +28,8 @@ const CounterScreen = () =>{
             //counter--;
             setCounter(counter-1);
             // this func will make the button counter work
+            //React doesn't detect direct manual modifications of state var
+            //Only through a Setter func!
         }}
         />
         
