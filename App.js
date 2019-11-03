@@ -3,15 +3,19 @@ import HomeScreen from './src/screens/HomeScreen';
 import ComponentsScreen from './src/screens/ComponentsScreen';
 import ListScreen from './src/screens/ListScreen';
 import ImageScreen from './src/screens/ImageScreen';
+import CounterScreen from './src/screens/CounterScreen';
 
 const navigator = createStackNavigator(
   //1 object
   {
     //what to show on the screen
+    //key:value pairs
     Home: HomeScreen, 
     Components: ComponentsScreen,
     List: ListScreen,
-    Image: ImageScreen
+    Image: ImageScreen,
+    Counter: CounterScreen
+
   },
   //2 object
   {

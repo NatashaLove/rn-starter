@@ -9,15 +9,19 @@ const ImageScreen = ()=>{
         <View>
         
        <ImageDetail title="Forest" 
-       imageSource={require('../../assets/forest.jpg')}/>
+       imageSource={require('../../assets/forest.jpg')}
+       imageScore={7}/>
        <ImageDetail title="Beach" 
-       imageSource={require('../../assets/beach.jpg')}/>
+       imageSource={require('../../assets/beach.jpg')}
+        imageScore={9}/>
        <ImageDetail title="Mountain" 
-       imageSource={require('../../assets/mountain.jpg')}/>
+       imageSource={require('../../assets/mountain.jpg')}
+      imageScore={5}/>
       <ImageDetail title="Natasha" 
-       imageSource={require('../../assets/natasha.jpg')}/>
-              
+       imageSource={require('../../assets/natasha.jpg')}
+       imageScore={20}/>       
         </View>
+        //numbers should be assignedin curly braces {7}
     );
 };
 
