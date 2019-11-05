@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import { View, Button, StyleSheet } from 'react-native';
+import { View, Button, StyleSheet, FlatList } from 'react-native';
 
 const ColorScreen = () => {
-    //creating var for atching state:
+    //creating var for watching state:
 const [colors, setColors] = useState([]);
 
 
@@ -16,8 +16,22 @@ const [colors, setColors] = useState([]);
         //...colors - means to take all elements of color array and add into new array
     }}/>
     
-    <View style = {{height:100, width:100, backgroundColor:randomRgb()}}/>
+    
+    <FlatList 
+       
+     //1.keyExtractor  - necessary for the key value: here (random color)), because rgb is unique
+    //2.data -we want to turn to list: colors/setColors-sets random color-
+    //3. renderItem - element of the list - in {}-properties of objects-destructuring: 
+     
+        keyExtractor={(item)=> item}
+       data={colors}
+        renderItem={({item})=>{
+            //item of the list==='rgb(0,0,0)' - code of the color
 
+            return <View style = {{height:100, width:100, backgroundColor: item}}/>
+//item - will be a random color in the list
+        }}
+    />
     </View>
     //style hardcoded here-because we on't know what style want yet
 

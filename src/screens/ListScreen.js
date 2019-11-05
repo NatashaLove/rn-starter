@@ -3,7 +3,7 @@ import {View, Text, StyleSheet, FlatList } from 'react-native';
 
 const ListScreen = ()=>{
     const friends =[
-        //name:'' - value (, key: 1)
+        //name:'' - value (, key: 1(index))
         {name: 'Friend#1', Age: 'Age 20'},
         {name: 'Friend#2', Age: 'Age 45'},
         {name: 'Friend#3', Age: 'Age 32'},
@@ -18,9 +18,9 @@ const ListScreen = ()=>{
 
 return (
      <FlatList 
-     //makes list display in 1 horizontal line rather than vertical list
+     //makes list display in 1 horizontal line rather than vertical list:
      //horizontal
-     //makes the scrollbar not to show
+     //makes the scrollbar not to show:
      //showsHorizontalScrollIndicator={false}
      //find object friend and return property name - using it as key:
      keyExtractor={friend => friend.name}
