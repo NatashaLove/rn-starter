@@ -62,7 +62,7 @@ const {count} = state;
         
         <Text> Current Count:{state.count}</Text>
     </View>
-    //{state.count} - displays current value / state- property count
+    //{state.count} - displays current value / state- property: count
     );
 };
 
