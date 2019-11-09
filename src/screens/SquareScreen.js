@@ -15,19 +15,36 @@ const reducer = (state, action) =>{
 //state is the object -rgb; action-is how the state of object should change
 //state==={red:number, green: number, blue:number}
 //action==={colorToChange: 'red' || 'green' || 'blue', amount: 15|| -15}
-    switch(action.colorToChange) {
+// The colorToChange properties are defined in our dispatch calls
+//by convention it's called "type"(of action)- prop / amount=>payload:    
+switch(action.colorToChange) {
         case 'red':
+        //instead of if - using terniery operator:    
+        //if(state.red +action.amount>255 || state.red + action.amount<0){ return state;//no changes}
+          return state.red +action.amount>255 || state.red + action.amount<0
+            ? state
+            : {...state, red: state.red + action.amount}
+
         //never changne state values directly
-         return {...state, red: state.red +action.amount};
-        //making a new object- copying all props of state, 
+         //return {...state, red: state.red +action.amount};
+        //making a new object- copying all props of state, {...state} 
         //but override red prop increasing it
 
         case 'green':
-            return {...state, green: state.green +action.amount};
+            return state.green +action.amount>255 || state.green + action.amount<0
+            ? state
+            : {...state, green: state.green + action.amount}
+    
+            //return {...state, green: state.green +action.amount};
         case 'blue':
-           return {...state, blue: state.blue +action.amount};
+            return state.blue +action.amount>255 || state.blue + action.amount<0
+            ? state
+            : {...state, blue: state.blue + action.amount}
+    
+          // return {...state, blue: state.blue +action.amount};
         default: 
         return state;// the previous color remains
+        //reducer must always return something! - or will result in error!
     }
 };
 
@@ -38,6 +55,7 @@ const SquareScreen = ()=>{
 //in arg 2 - initial value of the object with watched state:{red:...}
 //dispatch (convention name)===run the reducer: runMyReducer (can be called like that)
 const [state, dispatch] = useReducer(reducer, {red: 0, green: 0, blue: 0})
+//1 arg - reducer, 2 arg - initial state object
 //state is initially is equal to the rgb object with all 3 in one
 //console.log(state) //{red: 0, green: 0, blue: 0}
 
@@ -53,7 +71,8 @@ const {red, green, blue} = state;
     //then for REDUCER changed:
 
         //3 different areas with ColorCounter view on 1 screen:
-
+//The colorToChange properties are defined in our dispatch calls (type of action)-prop:
+//by convention colorToChange==type; amount==payload (what operation type and what data)
     return <View>
         <ColorCounter 
         onIncrease={()=> dispatch({colorToChange: 'red', amount: COLOR_INCREMENT})} 
