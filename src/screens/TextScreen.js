@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {View, Text, StyleSheet, TextInput} from 'react-native';
-//hen tracking only 1 var - useState
+//when tracking only 1 var - useState
 const TextScreen = () => {
 //new state:
     const [name, setName] = useState('');
