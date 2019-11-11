@@ -6,21 +6,9 @@ const BoxScreen = ()=> {
     return (
 
         <View style={styles.viewStyle}>
-            <View style={styles.textOneStyle,
-            {height:100,
-            width:100,
-            backgroundColor:'pink'}
-            }/>
-            <View style={styles.textTwoStyle,
-            {height:100,
-            width:100,
-            backgroundColor:'green', 
-            marginTop: 100
-            }}/>
-            <View style={styles.textThreeStyle,
-            {height:100,
-            width:100,
-            backgroundColor:'purple'}}/>
+            <View style={styles.textOneStyle}/>
+            <View style={styles.textTwoStyle}/>
+            <View style={styles.textThreeStyle}/>
               
         </View>
 
@@ -47,7 +35,10 @@ const styles = StyleSheet.create({
     textOneStyle: {
         borderWidth: 3,
         borderColor: 'pink',
-        alignSelf:'flex-start'
+        alignSelf:'flex-start',
+        height:100,
+        width:100,
+        backgroundColor:'pink'
       //margin: 20,
         //padding: 10,
         //alignContent: "stretch"
@@ -64,7 +55,11 @@ const styles = StyleSheet.create({
        //in styles marginTop didn't ork, but in View- describing the element itself
         //marginTop: 100,
         //padding:100,
-        alignSelf:'center'
+        //alignSelf:'center',
+        height:100,
+            width:100,
+            backgroundColor:'green', 
+            marginTop: 100
        // flex: 1, //makes the child take as much space as possible
        // alignSelf: 'stretch', // makes this child align in the center
         // there are other options
@@ -82,7 +77,11 @@ const styles = StyleSheet.create({
     textThreeStyle: {
         borderWidth: 3,
         borderColor: 'purple',
-        alignSelf: 'flex-end'
+        alignSelf: 'flex-start',
+        height:100,
+            width:100,
+            backgroundColor:'purple',
+            top: 0
         //flex:2,
        // fontSize: 18,
       //  position:'absolute'// by default - relative - everything is usual
